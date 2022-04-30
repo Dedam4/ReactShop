@@ -1,0 +1,14 @@
+import React from 'react'
+
+
+export const Cart = (props) => {
+    const { quantity = 0, handleBasketShow = Function.prototype } = props;
+
+    return (
+        <div className='cart green lighten-2' onClick={handleBasketShow}>
+            <i className="material-icons">add_shopping_cart</i>
+            {quantity ? <span className='cart-quantity'>{quantity}</span> : null}
+            
+        </div>
+    )
+}
